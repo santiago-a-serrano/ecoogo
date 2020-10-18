@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/descriptionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:singleLine="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="12sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionLogo"
+        tools:text="El restaurante Papa John's fue fundado en 1984 cuando &quot;Papa&quot; John Schnatter empezó a usar el armario de escobas en la parte posterior de la taberna de su padre, Mick's Lounge, en Jeffersonville, Indiana. Luego vendió su Camaro Z28 modelo 1971 para comprar un equipo de pizza usado por valor de US $1.600, con lo que comenzó a vender pizzas a los clientes de la taberna fuera del armario.​ Sus pizzas demostraron ser lo suficientemente populares para que un año después se mudara a un espacio contiguo. La salsa de acompañamiento específicamente para pizza fue inventada por Papa John's Pizza ese mismo año, y desde entonces se ha vuelto popular al comer pizza, especialmente la corteza. La compañía se hizo pública en 1993. Un año más tarde tenía 500 tiendas, y en 1997 había abierto 1,500 tiendas. En 2009, Schnatter volvió a comprar el Camaro luego de ofrecer una recompensa de $250,000 por el auto." />
+
+    <ImageView
+        android:id="@+id/descriptionLogo"
+        android:layout_width="40dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/scheduleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bpam_info_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

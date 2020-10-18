@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:visibility="visible"
+    tools:context=".MapActivity">
+
+    <com.google.android.gms.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        map:layout_constraintBottom_toTopOf="@+id/typeSelectorScrollView"
+        map:mapType="normal" />
+
+    <Button
+        android:id="@+id/myLocationButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/back_button_round"
+        android:drawableTop="@drawable/ic_my_location_gray_24dp"
+        android:onClick="onClick"
+        android:padding="12dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/shadow"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/shadow"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back_white_to_transparent" />
+
+    <View
+        android:id="@+id/allTypesToggleBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/back_type_selector_background"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/typeSelectorScrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/typeSelectorScrollView" />
+
+    <LinearLayout
+        android:id="@+id/loadingPopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_round_top_edges"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/primaryDarkColor"
+            app:layout_constraintBottom_toBottomOf="@+id/shadow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/loadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/catamaran_semibold"
+            android:paddingLeft="4dp"
+            android:text="@string/loading_text"
+            android:textColor="@color/evenDarkerGray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/allTypesToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:orientation="vertical"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/allTypesToggleBackground">
+
+        <Button
+            android:id="@+id/iconButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/back_button_round_type_selector_selected"
+            android:clickable="false"
+            android:drawableTop="@drawable/bicon_map"
+            android:padding="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/typeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/catamaran_semibold"
+            android:text="@string/all_types"
+            android:textAlignment="center"
+            android:textColor="@color/evenDarkerGray"
+            android:textSize="9sp"
+            app:autoSizeTextType="none"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="56dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:background="@color/darkerGray"
+        app:layout_constraintBottom_toBottomOf="@+id/allTypesToggle"
+        app:layout_constraintStart_toEndOf="@+id/allTypesToggle"
+        app:layout_constraintTop_toTopOf="@+id/allTypesToggle" />
+
+    <HorizontalScrollView
+        android:id="@+id/typeSelectorScrollView"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/back_type_selector_background"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/separator">
+
+        <LinearLayout
+            android:id="@+id/typeSelectorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryDarkColor"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/ecoogoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/coolvetica"
+            android:padding="8dp"
+            android:text="@string/app_name_lowercase"
+            android:textColor="@color/backgroundColor"
+            android:textSize="30sp" />
+
+        <HorizontalScrollView
+            android:id="@+id/tagsScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryDarkerColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_height="36dp">
+
+            <LinearLayout
+                android:id="@+id/tagsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

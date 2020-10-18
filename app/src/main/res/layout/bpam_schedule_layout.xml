@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scheduleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/scheduleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/catamaran"
+            android:gravity="center"
+            android:singleLine="false"
+            android:textAlignment="viewStart"
+            android:textSize="10sp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/scheduleLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Lunes a Jueves |  11:00 am - 11:00 pm  \nViernes y Sábado |  11:00 am - 12:00 pm  \nDomingo |  11:00 am - 11:00 pm  \nDomingo antes de festivo |  11:00 am - 12:00 pm  \nFestivo | 11:00 am - 11:00 pm"
+            android:lineSpacingMultiplier="0.75" />
+
+    <ImageView
+        android:id="@+id/scheduleLogo"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/scheduleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scheduleText"
+        app:srcCompat="@drawable/bpam_schedule_icon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

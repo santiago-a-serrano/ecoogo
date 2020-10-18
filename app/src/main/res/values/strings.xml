@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Ecoogo</string>
+    <string name="app_name_lowercase">ecoogo</string>
+    <string name="title_activity_map">Map</string>
+    <string name="error_title">Error!</string>
+    <string name="error_message">There was an error, please try again later or reach the developer for assistance.</string>
+    <string name="exit_text">Exit</string>
+    <string name="failed_gathering_data_title">No internet?</string>
+    <string name="failed_gathering_data_message">Ecoogo wasn\'t able to get the data from all the different experiences it has to offer. Please check your internet connection, and if the problem persists, contact the developer.</string>
+    <string name="you_are_here">You are here</string>
+    <string name="json_failed_title">Couldn\'t get data from our servers</string>
+    <string name="json_failed_message">Ecoogo was unable to get data from all of the experiences it has to offer. Reach the developer for assistance.</string>
+    <string name="icon">Icon</string>
+    <string name="my_location">My Location</string>
+    <string name="tip_title">Tip!</string>
+    <string name="tip_message">Here\'s a tip</string>
+    <string name="got_it_text">Got it!</string>
+    <string name="no_location_allowed_title">We aren\'t allowed to access your location!</string>
+    <string name="no_location_allowed_message">You didn\'t allow Ecoogo to access your location. The app will still work fine, but you\'ll get a better experience if you grant us the permission.</string>
+    <string name="location_disabled_title">Location disabled!</string>
+    <string name="location_disabled_message">Your location is disabled! If you enable it Ecoogo will be able to provide you a better experience.</string>
+    <string name="no_name_text">No name</string>
+    <string name="no_rating_text">\?</string>
+    <string name="language_code">ENG</string>
+    <string name="all_types">All</string>
+
+    <string name="google_maps_key" translatable="false">AIzaSyCcdzSJxzYKdmjn2WVL7MFjdzxf1jeOzFE</string>
+    <string name="go_text">go</string>
+    <string name="loading_text">Loading</string>
+    <string name="location_issues_title">Ecoogo works better with your location</string>
+    <string name="location_issues_description">In order to provide you the best experience, please enable GPS and location access</string>
+    <string name="turn_on_gps">Turn on GPS</string>
+    <string name="give_ecoogo_location_access">Give Ecoogo location access</string>
+</resources>

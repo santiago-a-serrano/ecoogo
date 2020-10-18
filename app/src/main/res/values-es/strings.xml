@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ecoogo</string>
+    <string name="failed_gathering_data_message">Ecoogo no pudo obtener la información de todas las experiencias distintas que tiene para ofrecerte. Por favor revisa tu conexión a internet, y si el problema persiste, contacta al desarrollador.</string>
+    <string name="error_title">¡Error!</string>
+    <string name="failed_gathering_data_title">No ha sido posible obtener la información en la red</string>
+    <string name="title_activity_map">Mapa</string>
+    <string name="error_message">Ha ocurrido un error, por favor intente de nuevo más tarde o contacte con el desarrollador.</string>
+    <string name="you_are_here">Estás aquí</string>
+    <string name="json_failed_message">Ecoogo no pudo obtener la información de todas las experiencias distintas que tiene para ofrecerte. Contacta con el desarrollador para o.</string>
+    <string name="json_failed_title">No ha sido posible obtener información del servidor</string>
+    <string name="exit_text">Salir</string>
+    <string name="icon">Icono</string>
+    <string name="language_code">ESP</string>
+</resources>
