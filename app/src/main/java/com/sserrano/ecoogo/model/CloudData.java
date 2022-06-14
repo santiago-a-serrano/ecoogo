@@ -23,7 +23,7 @@ public class CloudData {
 
     public static final String TAG = CloudData.class.getSimpleName();
 
-    private String jsonURL = "https://sserrano334.github.io/ecoogo-data/data.json";
+    private String jsonURL = "https://santiago-a-serrano.github.io/ecoogo.json";
     private String jsonData;
     private boolean dataAvailable = false, failed = false;
     private JSONArray types, tags;
