@@ -1,4 +1,4 @@
-# ecoogo (app for finding eco-friendly establishments in my home country)
+# ecoogo (awarded app for finding eco-friendly establishments)
 ## [Recognized by the media! (Click here)](https://www.bluradio.com/lanube/ecoogo-la-app-que-le-apuesta-la-economia-verde-y-al-medio-ambiente-238614-ie435)
 
 ![image](https://user-images.githubusercontent.com/72269728/209982530-c3ace0f3-e85f-43fa-9a25-0243024367aa.png)
